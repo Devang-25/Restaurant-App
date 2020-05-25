@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-sm-12 col-md-12 col-lg-12">
+		<div class="form-group row">
+			<div class="col-sm-3 col-md-3 col-lg-3">
+				<input [(ngModel)]="searchTest" placeholder="Search By Restaurant Name" type="text" class="form-control">
+          </div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="card">
+				<div class="table-responsive">
+					<ng-container *ngIf="data | tableFilter : searchTest : 'Restaurant Name';let d">
+						<app-data-table [columnDef]="columnDef" [data]="d" [height]="550">
+              
+						</app-data-table>
+					</ng-container>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,18 @@
+nav{
+  color: #fff;
+}
+nav a, nav a:hover,nav a:active {
+  color:#fff !important;
+}
+.home-icon{
+  color: tomato;
+  font-size: 28px;
+}
+.bg-dark {
+    background-color: #212529!important;
+}
+.action-icons{
+  color:#545b62;
+  font-size: 28px;
+}
+.action-icons:hover{color: tomato}

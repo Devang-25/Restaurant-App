@@ -1,0 +1,109 @@
+/* Add application styles & imports to this file! */
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+  background-color: #182a5e;
+  color:#164777;
+}
+
+.card{
+  border-radius: 0px;
+  background-color: rgba(7, 18, 66, 0.2);
+  border: none;
+}
+
+.form-control,.form-control:focus{
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  color:rgb(206, 122, 122);
+}
+.form-control {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  background-color: #dde0e9;
+  font-size: 0.88rem;
+}
+.form-control:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #060c22;
+}
+.table {
+   margin-bottom: 0px;
+}
+.table-dark {
+    color: rgb(253, 237, 5);
+    background-color: #010b14;
+}
+.table>thead>tr>th {
+	border-bottom: none;
+  cursor: pointer;
+  user-select: none;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-top: 1px solid #477eaa;
+}
+.table-dark td, .table-dark th, .table-dark thead th {
+    border-color: #112d49;
+}
+.sort-icon{
+  color:tomato
+}
+
+.orange-icon{
+  color:orange;
+}
+
+::-webkit-scrollbar {
+	height: 30px;
+	overflow: visible;
+	width: 15px
+}
+
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0
+}
+
+::-webkit-scrollbar-corner {
+	background: 0 0
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #8990a3;
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 5px;
+	min-height: 50%;
+	padding: 0;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(146, 109, 109, 0.1), inset 0 -1px 0 rgba(122, 31, 31, 0.07);
+	box-shadow: inset 1px 1px 0 rgba(59, 35, 35, 0.1), inset 0 -1px 0 rgba(73, 28, 28, 0.07);
+	color: rgba(119, 61, 61, 0.6);
+	border-radius: 10px
+}
+
+::-webkit-scrollbar-track {
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 1px;
+	width: 10px
+}

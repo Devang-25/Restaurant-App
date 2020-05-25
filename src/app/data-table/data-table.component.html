@@ -1,0 +1,29 @@
+<cdk-virtual-scroll-viewport itemSize="50" [ngStyle]="{'height.px':height}">
+	<table class="table table-dark table-hover">
+		<thead>
+			<tr>
+				<th *ngFor="let col of columnDef" (click)="doOrder(col.prop)"
+					[ngStyle]="{'width.%':col.width? col.width:0}">
+					<span [innerHTML]="col.displayName"></span>
+					<span class="pl-2 fa sort-icon" [ngClass]="getClass(col.prop)"></span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+      <ng-container  *ngTemplateOutlet="dataSource.length>0 ? hasData : noData">
+        
+      </ng-container>
+			<ng-template #hasData>
+				<tr *cdkVirtualFor="let row of dataSource|tableSort:prop:orderBy">
+					<td *ngFor="let col of columnDef" [innerHTML]="row[col.prop]"></td>
+				</tr>
+			</ng-template>
+			<ng-template #noData>
+				<tr>
+					<td class="text-center" [attr.colspan]="columnDef.length">No Data Found</td>
+				</tr>
+			</ng-template>
+		</tbody>
+	</table>
+</cdk-virtual-scroll-viewport>
+<p class="mt-2 text-mute">Total Records : {{dataSource.length}}</p>
